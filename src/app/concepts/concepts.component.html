@@ -16,6 +16,41 @@
     <div class="tab-pane fade show active" id="basic-databinding" role="tabpanel"
       aria-labelledby="basic-databinding-tab">
       <h2>Basic Data Binding</h2>
+      <h3>String Interpolation</h3>
+      <p>{{appName}}</p>
+      <p>Making this in {{year}}</p>
+      <p title="{{appName}}">Mouseover to see the app name</p>
+      <input type="text" value="{{appName}}">
+      <hr>
+
+      <h3>Property Binding</h3>
+      <p [title]="companyName">Mouseover to see the company name</p>
+      <input type="text" [value]="companyName">
+
+      <br>
+      <div class="redText">
+        It works with CSS
+      </div>
+
+      <!-- <div [class]="redText">
+        Will it work?
+      </div> -->
+
+      <!-- class binding -->
+      <div [ngClass]="{ 'redText': !isLoggedIn, 'greenText': isLoggedIn }">
+        Will it work?
+      </div>
+
+      <!-- todo: ngStyle -->
+      
+      <hr>
+      <h3>Event Binding</h3>
+
+      <button onclick="clickMeHandler()">Click me -- won't work -- check console</button>
+      <br><br>
+      <button (click)="clickMeHandler($event)">Click Me</button>
+
+
     </div>
 
     <div class="tab-pane fade" id="cpb-tab" role="tabpanel" aria-labelledby="cpb-tab-tab">
