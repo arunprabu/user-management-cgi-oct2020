@@ -26,13 +26,16 @@ export class ConceptsComponent implements OnInit {
 
   // property binding
   companyName = 'CGI';
-  isLoggedIn = false;
+  isLoggedIn = false;  // also used in *ngIf
 
   // two way binding
   courseName = 'Angular 9';
 
   // CEB Related
   dataFromChildComp;
+
+  // *ngFor
+  menuList: string[] = [ 'home', 'about', 'users', 'reports'];
 
   constructor() {
 
