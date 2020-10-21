@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+// Decorator
 @Component({
   selector: 'app-concepts',
   templateUrl: './concepts.component.html',
@@ -27,6 +28,12 @@ export class ConceptsComponent implements OnInit {
   companyName = 'CGI';
   isLoggedIn = false;
 
+  // two way binding
+  courseName = 'Angular 9';
+
+  // CEB Related
+  dataFromChildComp;
+
   constructor() {
 
   }
@@ -40,6 +47,10 @@ export class ConceptsComponent implements OnInit {
     // todo: change the button text as clicked
     // todo: disable the button also
     alert('clicked');
+  }
+
+  profileLoadedHandler(event){
+    this.dataFromChildComp = event;
   }
 
 }
