@@ -3,9 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ConceptsComponent } from './concepts/concepts.component';
 import { HomeComponent } from './home/home.component';
-import { AddUserComponent } from './users/add-user/add-user.component';
-import { UserDetailsComponent } from './users/user-details/user-details.component';
-import { UsersComponent } from './users/users.component';
+import { AddUserComponent } from './users/components/add-user/add-user.component';
+import { UserDetailsComponent } from './users/components/user-details/user-details.component';
+import { UsersComponent } from './users/components/users.component';
 
 // configuring the routes
 const routes: Routes = [

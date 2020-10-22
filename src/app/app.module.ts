@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,9 +13,9 @@ import { HomeComponent } from './home/home.component';
 import { ConceptsComponent } from './concepts/concepts.component';
 import { CpbComponent } from './concepts/cpb/cpb.component';
 import { CebComponent } from './concepts/ceb/ceb.component';
-import { UsersComponent } from './users/users.component';
-import { AddUserComponent } from './users/add-user/add-user.component';
-import { UserDetailsComponent } from './users/user-details/user-details.component';
+import { UsersComponent } from './users/components/users.component';
+import { AddUserComponent } from './users/components/add-user/add-user.component';
+import { UserDetailsComponent } from './users/components/user-details/user-details.component';
 
 // Main Switching Box
 @NgModule({
@@ -37,7 +38,8 @@ import { UserDetailsComponent } from './users/user-details/user-details.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule, // ngModel
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent] // 3. AppModule should bootstrap AppComponent
