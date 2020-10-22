@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +36,8 @@ import { UserDetailsComponent } from './users/user-details/user-details.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule // ngModel
+    FormsModule, // ngModel
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent] // 3. AppModule should bootstrap AppComponent
