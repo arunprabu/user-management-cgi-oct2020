@@ -51,4 +51,13 @@ export class UserService {
         return res;
       }));
   }
+
+  updateUser( userData ){
+    console.log(userData);
+    return this.http.put(this.REST_API_URL + '/' + userData.id, userData)
+      .pipe(map( (res: any) => {
+        console.log(res);
+        return res;
+      }));
+  }
 }

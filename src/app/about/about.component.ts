@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  today: Date = new Date();
+
+  sampleText = 'Once data updated successfully';
+
   constructor() { }
 
   ngOnInit(): void {
