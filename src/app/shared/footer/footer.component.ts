@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <div class="text-center">
       <hr>
       <app-menu></app-menu>
+      <ng-content></ng-content> <!-- content projection -->
       <p>Copyright 2020</p>
     </div>
   `,
