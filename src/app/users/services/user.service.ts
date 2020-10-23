@@ -26,4 +26,29 @@ export class UserService {
         return res;
       }));
   }
+
+  getUsers(){ // 1. get the request from comp
+    console.log('Inside getUser()');
+
+    // 2.1 Identify the REST API End Point - REST_API_URL
+    // 2.2 What HTTP Method? GET
+    // 2.3 What REST API Client? HttpClient
+
+    return this.http.get(this.REST_API_URL)
+      .pipe(map( (res: any) => {  // 3. get the resp from REST API
+        console.log(res);
+        // flip, filter, sort, remove
+        // 4. send it back to the comp
+        return res;
+      }));
+  }
+
+  getUserById(userId){
+    console.log(userId);
+    return this.http.get(this.REST_API_URL + '/' + userId)
+      .pipe(map( (res: any) => {
+        console.log(res);
+        return res;
+      }));
+  }
 }
